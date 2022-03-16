@@ -36,8 +36,8 @@ if __name__ == '__main__':
         if epoch % 3 == 0:
             mean_loss, accuracy = model.test(test_dataLoader, batch_size)
             print(f'val_loss: {mean_loss} \t val_accuracy: {accuracy}')
-        if (epoch + 1) % 10 == 0:
-            model.auto_save()
+        if (epoch + 1) % 5 == 0:
+            model.auto_save(save_path)
     # t = time.localtime()
     # month, day, hour, minute = t.tm_mon, t.tm_mday, t.tm_hour, t.tm_min
     # model.save_model(save_path + f'{month}-{day} {hour}:{minute}')
